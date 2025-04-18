@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Starter Pack (Boilerplate)
 
-## Getting Started
+Proyek ini adalah sebuah starter pack (boilerplate) siap pakai untuk memulai pengembangan aplikasi web modern menggunakan Next.js, TypeScript, dan Tailwind CSS.
 
-First, run the development server:
+## Tentang Proyek Ini
+
+Starter pack ini dirancang untuk mempercepat proses inisialisasi proyek Next.js Anda dengan menyediakan konfigurasi dasar dan struktur direktori yang umum digunakan. Tujuannya adalah agar Anda bisa langsung fokus pada pengembangan fitur inti aplikasi Anda.
+
+## Fitur Utama
+
+*   **Next.js 14:** Dibangun dengan versi terbaru dari framework React.
+*   **TypeScript:** Menggunakan static typing untuk meningkatkan kualitas kode dan kemudahan pemeliharaan.
+*   **Tailwind CSS:** Memanfaatkan utility-first CSS untuk pengembangan UI yang cepat.
+*   **App Router:** Menggunakan App Router terbaru dari Next.js untuk routing dan layout yang lebih baik.
+*   **ESLint:** Sudah dikonfigurasi untuk menjaga konsistensi gaya penulisan kode.
+*   **Struktur Direktori:** Menggunakan direktori `src/` untuk kode sumber dan alias import `@/*`.
+*   **Contoh Halaman:** Termasuk contoh halaman landing page sederhana (`src/app/page.tsx`) beserta komponen (`src/components/`) sebagai panduan struktur.
+
+## Cara Menggunakan
+
+1.  **Clone Repository:**
+    Salin (clone) repository ini ke mesin lokal Anda menggunakan Git:
+    ```bash
+    git clone <URL_REPOSITORY_ANDA> nama-folder-proyek-baru
+    cd nama-folder-proyek-baru
+    ```
+    *Ganti `<URL_REPOSITORY_ANDA>` dengan URL repository Git tempat Anda menyimpan starter pack ini.* 
+    *Ganti `nama-folder-proyek-baru` dengan nama direktori yang Anda inginkan untuk proyek baru Anda.*
+
+2.  **Install Dependensi:**
+    Pasang semua dependensi yang dibutuhkan menggunakan npm atau yarn:
+    ```bash
+    npm install
+    # atau
+    yarn install
+    ```
+
+3.  **Jalankan Development Server:**
+    Mulai server pengembangan lokal:
+    ```bash
+    npm run dev
+    # atau
+    yarn dev
+    ```
+    Buka [http://localhost:3000](http://localhost:3000) di browser Anda untuk melihat hasilnya.
+
+4.  **Mulai Koding!**
+    Anda bisa mulai memodifikasi kode di dalam direktori `src/`. File utama untuk halaman depan adalah `src/app/page.tsx`.
+
+## Build untuk Produksi
+
+Untuk membuat versi produksi dari aplikasi Anda, jalankan:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+# atau
+yarn build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Perintah ini akan menghasilkan versi optimasi dari aplikasi Anda di dalam folder `.next`.
