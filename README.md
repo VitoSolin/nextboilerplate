@@ -1,60 +1,139 @@
-# Next.js Starter Pack (Boilerplate)
+# Next.js Starter Template
 
-Proyek ini adalah sebuah starter pack (boilerplate) siap pakai untuk memulai pengembangan aplikasi web modern menggunakan Next.js, TypeScript, dan Tailwind CSS.
+A modern, production-ready starter template built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**.
 
-## Tentang Proyek Ini
+## ✨ Features
 
-Starter pack ini dirancang untuk mempercepat proses inisialisasi proyek Next.js Anda dengan menyediakan konfigurasi dasar dan struktur direktori yang umum digunakan. Tujuannya adalah agar Anda bisa langsung fokus pada pengembangan fitur inti aplikasi Anda.
+- ⚡ **Next.js 15** with App Router
+- 🔷 **TypeScript** for type safety
+- 🎨 **Tailwind CSS v4** for styling
+- 📱 **Responsive Design** with modern UI components
+- 🧰 **Reusable Components** with proper TypeScript interfaces
+- 🎯 **Custom Hooks** for common functionality
+- 📦 **Utility Functions** for common operations
+- 🔧 **ESLint & Prettier** for code quality
+- 🚀 **Ready for deployment** on Vercel, Netlify, etc.
 
-## Fitur Utama
+## 🚀 Quick Start
 
-*   **Next.js 14:** Dibangun dengan versi terbaru dari framework React.
-*   **TypeScript:** Menggunakan static typing untuk meningkatkan kualitas kode dan kemudahan pemeliharaan.
-*   **Tailwind CSS:** Memanfaatkan utility-first CSS untuk pengembangan UI yang cepat.
-*   **App Router:** Menggunakan App Router terbaru dari Next.js untuk routing dan layout yang lebih baik.
-*   **ESLint:** Sudah dikonfigurasi untuk menjaga konsistensi gaya penulisan kode.
-*   **Struktur Direktori:** Menggunakan direktori `src/` untuk kode sumber dan alias import `@/*`.
-*   **Contoh Halaman:** Termasuk contoh halaman landing page sederhana (`src/app/page.tsx`) beserta komponen (`src/components/`) sebagai panduan struktur.
+### Prerequisites
 
-## Cara Menggunakan
+- Node.js 18.17 or later
+- npm, yarn, or pnpm
 
-1.  **Clone Repository:**
-    Salin (clone) repository ini ke mesin lokal Anda menggunakan Git:
-    ```bash
-    git clone <URL_REPOSITORY_ANDA> nama-folder-proyek-baru
-    cd nama-folder-proyek-baru
-    ```
-    *Ganti `<URL_REPOSITORY_ANDA>` dengan URL repository Git tempat Anda menyimpan starter pack ini.* 
-    *Ganti `nama-folder-proyek-baru` dengan nama direktori yang Anda inginkan untuk proyek baru Anda.*
+### Installation
 
-2.  **Install Dependensi:**
-    Pasang semua dependensi yang dibutuhkan menggunakan npm atau yarn:
-    ```bash
-    npm install
-    # atau
-    yarn install
-    ```
-
-3.  **Jalankan Development Server:**
-    Mulai server pengembangan lokal:
-    ```bash
-    npm run dev
-    # atau
-    yarn dev
-    ```
-    Buka [http://localhost:3000](http://localhost:3000) di browser Anda untuk melihat hasilnya.
-
-4.  **Mulai Koding!**
-    Anda bisa mulai memodifikasi kode di dalam direktori `src/`. File utama untuk halaman depan adalah `src/app/page.tsx`.
-
-## Build untuk Produksi
-
-Untuk membuat versi produksi dari aplikasi Anda, jalankan:
-
+1. Clone the repository:
 ```bash
-npm run build
-# atau
-yarn build
+git clone <your-repo-url>
+cd your-project-name
 ```
 
-Perintah ini akan menghasilkan versi optimasi dari aplikasi Anda di dalam folder `.next`.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # Reusable components
+│   ├── ui/               # UI components
+│   │   ├── Button.tsx    # Button component
+│   │   └── index.ts      # UI exports
+│   ├── Features.tsx      # Features section
+│   ├── Footer.tsx        # Footer component
+│   └── Hero.tsx          # Hero section
+├── constants/            # App constants
+│   └── index.ts          # Site config & data
+├── hooks/                # Custom React hooks
+│   └── useLocalStorage.ts
+├── lib/                  # Utility functions
+│   └── utils.ts          # Helper functions
+└── types/                # TypeScript type definitions
+    └── index.ts          # Common types
+```
+
+## 🎨 Customization
+
+### Theme & Styling
+
+1. **Colors**: Modify the color palette in `tailwind.config.ts`
+2. **Fonts**: Update font configuration in `src/app/layout.tsx`
+3. **Components**: Customize UI components in `src/components/ui/`
+
+### Site Configuration
+
+Update your site metadata in `src/constants/index.ts`:
+
+```typescript
+export const siteConfig = {
+  name: 'Your Site Name',
+  description: 'Your site description',
+  url: 'https://yoursite.com',
+  // ... other config
+};
+```
+
+## 🛠️ Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 📚 Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Fonts**: [Geist](https://vercel.com/font)
+- **Linting**: [ESLint](https://eslint.org/)
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Deploy with zero configuration
+
+### Other Platforms
+
+This template works with any platform that supports Next.js:
+- Netlify
+- Railway
+- AWS Amplify
+- Docker
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+**Happy coding!** 🎉
