@@ -1,63 +1,43 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { siteConfig } from "@/constants";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  keywords: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Starter Template'],
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
+  title: 'Meme Kelas - Direktori Meme untuk Anak Sekolah',
+  description: 'Website direktori meme terlengkap dengan sound quiz dan mini games untuk anak sekolah. Koleksi meme lucu, kuis sound effect, dan games seru!',
+  keywords: ['Meme', 'Direktori Meme', 'Sound Quiz', 'Mini Games', 'Anak Sekolah'],
+  authors: [{ name: 'Meme Kelas Team' }],
+  creator: 'Meme Kelas Team',
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
-    images: [
-      {
-        url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
+    locale: 'id_ID',
+    title: 'Meme Kelas - Direktori Meme untuk Anak Sekolah',
+    description: 'Website direktori meme terlengkap dengan sound quiz dan mini games untuk anak sekolah',
+    siteName: 'Meme Kelas',
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [siteConfig.ogImage],
-    creator: '@yourhandle',
+    title: 'Meme Kelas - Direktori Meme untuk Anak Sekolah',
+    description: 'Website direktori meme terlengkap dengan sound quiz dan mini games untuk anak sekolah',
+    creator: '@memekelas',
   },
-  metadataBase: new URL(siteConfig.url),
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="id">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Comic+Neue:wght@300;400;700&display=swap" 
+          rel="stylesheet" 
+        />
+      </head>
+      <body className="antialiased">
         {children}
       </body>
     </html>
